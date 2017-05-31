@@ -1,0 +1,20 @@
+<div ng-controller="mainController">
+	<h1 class="page-header">Performance Reports</h1>
+	<div class="row">
+	   <div>
+	   		<h3>Employee/Customer workflow</h3>
+		   <div>
+		   		<canvas id="bar" class="chart chart-bar"  chart-data="data" chart-labels="labels"
+		   		chart-series="series" ></canvas> 
+		   </div>
+		</div>
+	</div>
+	<div class="row">
+	   <div>
+	   		<h3>Performance</h3>
+		   <div>
+		   		<canvas id="line" class="chart chart-line" chart-data="revenueData" chart-labels="labels" chart-series="revenueSeries"></canvas> 
+		   </div>
+		</div>
+	</div>
+</div>

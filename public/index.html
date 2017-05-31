@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+  <head>
+    <title>Econth CRM Homepage</title>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- CSS Files -->
+    <!--link rel="stylesheet" type="text/css" href="lib\css\bootstrap.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://cloud.github.com/downloads/lafeber/world-flags-sprite/flags16.css" />
+    <link rel="stylesheet" href="lib\css\font-awesome.css">
+    <link rel="stylesheet" href="lib\css\bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" href="css\main.css">
+    <link rel="stylesheet" type="text/css" href="css\homepage.css">
+    <link rel="stylesheet" type="text/css" href="css\dashboard.css">
+
+    <!--Libraries -->
+    <script src="lib\js\angular.js"></script>
+    <script src="lib\js\angular-ui-router.min.js"></script>
+    <script src="lib\js\angular-animate.js"></script>
+    <script src="lib\js\angular-sanitize.js"></script>
+    <script src="lib\js\ui-bootstrap-tpls-2.3.1.js"></script>
+    <script src="lib\js\angular-cookies.js"></script>
+    <script src="lib\js\ng-flags.js"></script>
+    <script src="lib\js\Chart.js"></script>
+    <script src="lib\js\angular-chart.min.js"></script>
+    <script src="lib\js\angular-sqlite.js"></script>
+    <script src="lib\js\html2canvas.js"></script>
+    <script src="lib\js\pdfmake.min.js"></script>
+    <script src="lib\js\vfs_fonts.js"></script>
+   
+    <!-- App File-->
+    <script src="app.module.js"></script>
+    <script src="app.constant.js"></script>
+    <!--<script src="app.provider.js"></script> -->
+    <script src="app.config.js"></script>
+    <script src="app.run.js"></script>
+   
+
+    <!-- Controller -->
+    <script src="js\controller\homeController.js"></script>
+    <script src="js\controller\loginController.js"></script>
+    <script src="js\controller\mainController.js"></script>
+    <script src="js\controller\employeeController.js"></script>
+    <script src="js\controller\customerController.js"></script>
+    <script src="js\controller\modalInstanceController.js"></script>
+    <script src="js\controller\myDateController.js"></script>
+    <script src="js\controller\appointmentController.js"></script>
+
+
+    <!-- Services for Office--> 
+
+  <!--  <script src="js\sqlite-service\login-service.js"></script>
+    <script src="js\sqlite-service\appointment-service.js"></script>
+    <script src="js\sqlite-service\customer-service.js"></script> 
+    <script src="js\sqlite-service\employee-service.js"></script> -->
+
+
+    <!-- Services for Home -->
+    <!--
+    <script src="js\service\user-service.js"></script>
+    
+    <script src="js\service\employee-service.js"></script>
+    -->
+
+
+    <!-- Common Sevice -->
+    <script src="js\service\login-service.js"></script>
+    <script src="js\service\appointment-service.js"></script>
+    <script src="js\service\customer-service.js"></script>
+    <script src="js\service\employee-service.js"></script>
+    <script src="js\service\common-service.js"></script>
+
+    <!-- Custom directives -->
+    <script src="js\directive\myHeader.js"></script>
+    <script src="js\directive\myFooter.js"></script>
+    <script src="js\directive\myLoginFormat.js"></script>
+    <script src="js\directive\myRegisterFormat.js"></script>
+    <script src="js\directive\myValidator.js"></script>
+    <script src="js\directive\myField.js"></script>
+    <script src="js\directive\mySidemenu.js"></script>
+    <script src="js\directive\myDateField.js"></script>
+    <script src="js\directive\myTimePicker.js"></script>
+   </head>
+  <body>
+    <ui-view></ui-view> 
+  </body>
+</html>

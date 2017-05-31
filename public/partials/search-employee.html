@@ -1,0 +1,56 @@
+<div ng-controller="employeeController">
+	<h1 class="page-header"> Search Employee</h1>
+	<div class="row">
+		<form>
+			<div class="col-sm-12">
+				<div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)" dismiss-on-timeout="2500">{{alert.msg}}
+				</div>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<input type="text" ng-model="employeename" name="employeename" placeholder="Enter the Employee first or last name" class="form-control">
+					</div>
+					<div class="col-sm-6 form-group">
+						<button type="button" class="btn btn-md btn-info" ng-click="searchEmployee(employeename)">Search</button>	
+					</div>
+				</div>
+				<div class="row form-group col-xs-12"  ng-if="result.length>0">
+					<h3> Search results</h3>
+				</div>
+				<div class="row" ng-if="result.length>0">
+					<div class="col-sm-12 form-group table-responsive">
+						<table class="table table-bordered table-hover table-striped">
+							<thead>
+								<tr>
+									<th>SI No.</th>
+									<th>FirstName</th>
+									<th>LastName</th>
+									<th>Date Of Birth</th>
+									<th>Mobile Number</th>
+									<th>E-Mail</th>
+									<th></th>	
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="employee in result.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))">
+									<td>{{$index+1}}</td>
+									<td>{{employee.firstname}}</td>
+									<td>{{employee.lastname}}</td>
+									<td>{{employee.dob | date:'dd/MM/yyyy'}}</td>
+									<td>{{employee.mobile}}</td>
+									<td>{{employee.email}}</td>
+									<td>
+										<button type="button" class="btn btn-sm btn-primary" ng-click="updateEmployeePage(employee)"><i class="fa fa-pencil fa-1x" aria-hidden="true"></i> Update</button>
+										<button type="button" class="btn btn-sm btn-danger" ng-click="deleteEmployee(employee.email)"><i class="fa fa-trash fa-1x" aria-hidden="true"></i> Delete</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-sm-12 text-right">
+							<ul uib-pagination total-items="totalItems" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages" ng-model="currentPage" items-per-page="itemsPerPage"></ul>
+					</div>
+				</div>		
+			</div>
+		</form> 
+	</div>
+</div>

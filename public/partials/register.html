@@ -1,0 +1,30 @@
+<div class="text-center">
+
+  <h2 class="white-text-color modal-heading">Create Account</h2>  	
+  <form name="loginFrom">
+  
+  <div>	
+	<div class="form-group">
+       <input type="text" class="form-control" ng-model="credentials.username" name="username" placeholder="Username" required/> 
+    </div>
+    <div class="form-group">
+       <input type="Password" class="form-control" ng-model="credentials.password" name="password" placeholder="Password" required/>
+    </div>
+    <div class="form-group">
+       <input type="text" class="form-control" ng-model="credentials.mobile" name="mobile" placeholder="Mobile Number" required/>
+    </div>
+    <div class="form-group">
+       <input type="email" class="form-control" ng-model="credentials.email" name="email" placeholder="E-mail" required/>
+    </div>
+    <div class="form-group white-text-color">
+     	<input type="checkbox"/> I have read and agree to the <a href="#" class="link-decoration">Terms of Use</a> and <a href="#" class="link-decoration">Privacy Policy</a>	
+    </div>
+    <div class="form-group">
+     	<button type="button" class="btn btn-success btn-block" ng-click="createUser(credentials)"><span class="glyphicon glyphicon-lock"></span> Create Account</button>	
+    </div>
+    <div class="form-group white-text-color">
+     	Already have an account? <a href="" class="link-decoration" ng-click="signInModal()">Sign In</a>
+    </div>
+  </div>
+</form>
+</div>

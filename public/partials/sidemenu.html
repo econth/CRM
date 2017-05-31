@@ -1,0 +1,58 @@
+  <li ng-click="dashboard()">
+    <a>
+    	<i class="fa fa-dashboard fa-lg"></i> Dashboard
+    </a>
+  </li>
+   <li ng-click="bookAppointment()">
+    <a>
+      <i class="fa fa-sticky-note-o fa-lg"></i> Book Appointment
+    </a>
+  </li>
+   <li ng-click="appointments()">
+    <a>
+      <i class="fa fa-sticky-note-o fa-lg"></i> Appointments
+    </a>
+  </li>
+  <div uib-dropdown>
+    <li id="employee" class="collapsed" uib-dropdown-toggle>
+      <a><i class="fa fa-gift fa-lg"></i> Customer <span class="arrow"></span></a>
+    </li>  
+  <ul class="sub-menu collapse" uib-dropdown-menu aria-labelledby="employee">
+        <li ng-click="addCustomer()">Add Customer</li>
+        <li ng-click="searchCustomer()">Search Customer</li>
+        <li ng-click="inactiveCustomers()">Inactive Customers</li>
+  </ul>
+</div>
+<div uib-dropdown>
+    <li id="employee" class="collapsed" uib-dropdown-toggle>
+      <a><i class="fa fa-globe fa-lg"></i> Employees <span class="arrow"></span></a>
+    </li>  
+  <ul class="sub-menu collapse" uib-dropdown-menu aria-labelledby="employee">
+        <li ng-click="addEmployee()">Add Employee</li>
+        <li ng-click="searchEmployee()">Search Employee</li>
+        <li ng-click="inactiveEmployees()">Inactive Employees</li>
+  </ul>
+</div>
+  <li ng-click="accounts()">
+    <a>
+    	<i class="fa fa-user fa-lg"></i> Accounts
+    </a>
+  </li>
+  <li ng-click="invoices()">
+   <a>
+    	<i class="fa fa-history fa-lg"></i> Invoices
+   </a>
+  </li>
+
+  <li ng-click="reports()">
+   <a>
+    	<i class="fa fa-file-text fa-lg"></i> Reports
+   </a>
+  </li>
+
+  <li ng-click="signout()">
+   <a>
+    	<i class="fa fa-sign-out fa-lg"></i> Signout
+   </a>
+  </li>
+  

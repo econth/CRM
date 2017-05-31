@@ -1,0 +1,34 @@
+<div ng-controller="customerController">
+	<h1 class="page-header"> Customer Registration Form</h1>
+	<div class="row">
+		<form>
+			<div class="col-sm-12">
+				<div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)" dismiss-on-timeout="2500">{{alert.msg}}
+				</div>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<label for="firstname">First Name</label>
+						<input type="text" ng-model="customer.firstname" name="firstname" placeholder="First Name" class="form-control">
+					</div>
+					<div class="col-sm-6 form-group">
+						<label for="lastname">Last Name</label>
+						<input type="text" ng-model="customer.lastname" name="lastname" placeholder="Last Name" class="form-control">
+					</div>
+				</div>
+				<div class="form-group">
+					<my-date-field label="Date of Birth" type="text" my-type="dob" name="dob" ng-model="customer.dob"></my-date-field>
+				</div>		
+				<div class="form-group">
+					<label for="mobilenumber">Mobile Number</label>
+					<input type="text" ng-model="customer.mobilenumber" name="mobilenumber" placeholder="Mobile Number" class="form-control">
+				</div>
+				<div class="form-group">
+					<label for="email">Email</label>
+					<input type="text" ng-model="customer.email" name="email" placeholder="Email Address" class="form-control">
+				</div>
+				<button type="button" class="btn btn-md btn-info" ng-click="addCustomer(customer)">Add Customer</button>	
+				<button type="button" class="btn btn-md btn-info" ng-click="reset()">Reset</button>	
+			</div>
+		</form> 
+	</div>
+</div>

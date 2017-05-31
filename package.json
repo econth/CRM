@@ -1,0 +1,24 @@
+{
+  "name": "econth",
+  "version": "1.0.0",
+  "description": "Econth CRM for managing customers and their Appointment",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "Econth",
+    "CRM"
+  ],
+  "author": "Parthiban Govindaraj",
+  "license": "MIT",
+  "dependencies": {
+    "express": "*",
+    "body-parser": "*",
+    "method-override": "*",
+    "morgan":"*",
+    "mongoose": "*",
+    "path":"*"
+  }
+}

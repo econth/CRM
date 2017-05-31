@@ -1,0 +1,18 @@
+<div ng-controller="homeController">
+  <header id="bodyColor">
+     <my-header></my-header>   
+  </header>
+  <div  class="container-fluid">
+    <div class="row">
+      <div uib-carousel active="active" interval="myInterval" no-wrap="noWrapSlides">
+        <div uib-slide ng-repeat="slide in slides track by slide.id" index="slide.id">
+          <img ng-src="{{slide.image}}" style="margin:auto;" class="img-responsive">
+          <div class="carousel-caption">
+              <p>{{slide.text}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 	<my-footer></my-footer>
+</div>

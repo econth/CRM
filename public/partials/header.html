@@ -1,0 +1,22 @@
+<div class="row header-width">
+  <img src="img\logo.png" height="70px" width="207px"/>
+   <ul class="nav nav-pills pull-right header ">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Econth</a></li>
+      <li><a href="#">News</a></li>
+      <li><a href="#">Contributors</a></li>
+      <li><a href="#">About Us</a></li>       
+     
+      <li ><button type="button" class="btn btn-success" ng-model="login" ng-click="loginModal()"><span class="glyphicon glyphicon-lock"> </span> Login</button></li>
+      <li ><button type="button" class="btn btn-warning" ng-model="signup" ng-click="registerModal()"><span class="glyphicon glyphicon-plus"></span> Signup</button></li>
+      <li>
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+            <button id="single-button" type="button" class="btn btn-link" uib-dropdown-toggle ng-disabled="disabled"><flag country="{{country}}" size="16"></flag>
+            </button>
+              <ul class="home-dropdown-menu" uib-dropdown-menu role="menu" aria-labelledby="single-button"  >
+                    <li role="menuitem" ng-repeat="country in countries" ng-click="changeCountry(country)"><a href="#"><flag country="{{country}}" size="16"></a></li>
+              </ul>
+        </div>                                                                                      
+      </li ng-click="changeCountry(country)">          
+    </ul>
+</div>

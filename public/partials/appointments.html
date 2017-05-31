@@ -1,0 +1,49 @@
+<div ng-controller="appointmentController">
+	<h1 class="page-header"> Appointments</h1>
+	<div class="row">
+		<div class="col-sm-12 form-group">
+			<div uib-alert ng-repeat="alert in alerts" ng-class="'alert-' + (alert.type || 'warning')" close="closeAlert($index)" dismiss-on-timeout="2500">{{alert.msg}}
+			</div>
+			<div class="row">
+				<div class="col-sm-6 form-group">
+					<input type="text" ng-model="filterAppointment" name="filterAppointment" class="form-control">
+				</div>
+			</div>
+			<div class="row form-group col-xs-12" ng-if="appointmentData.length>0">
+				<h3> Search results</h3>
+			</div>
+				<div class="row" ng-if="appointmentData.length>0">
+					<div class="col-sm-12 form-group table-responsive">
+						<table class="table table-bordered table-hover table-striped">
+							<thead>
+								<tr>
+									<th>SI No.</th>
+									<th>Appointment Date</th>
+									<th>Time</th>
+									<th>Mobile Number</th>
+									<th>E-Mail</th>
+									<th></th>	
+								</tr>
+							</thead>
+							<tbody>
+								<tr ng-repeat="appointment in appointmentData.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage)) | filter : filterAppointment ">
+									<td>{{$index+1}}</td>
+									<td>{{appointment.doa | date:'dd/MM/yyyy'}}</td>
+									<td>{{appointment.time}}</td>
+									<td>{{appointment.mobile}}</td>
+									<td>{{appointment.email}}</td>
+									<td>
+										<a href="">view details</a>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<div class="col-sm-12 text-right">
+							<ul uib-pagination total-items="totalItems" max-size="maxSize" class="pagination-sm" boundary-links="true" num-pages="numPages" ng-model="currentPage" items-per-page="itemsPerPage"></ul>
+					</div>
+				</div>
+		</div>
+	</div>
+
+</div>

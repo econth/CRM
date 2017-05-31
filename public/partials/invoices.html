@@ -1,0 +1,110 @@
+<div ng-controller="mainController">
+	<h1 class="page-header"> Invoice</h1>
+	<div class="row">
+		<form>
+			<div class="col-sm-12">
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<input type="text" placeholder="Appointment No or Invoice No" class="form-control">
+					</div>
+					<div class="col-sm-6 form-group">
+						<button type="button" class="btn btn-md btn-info">Get Invoice</button>	
+					</div>
+				</div>
+				<div class="row form-group col-xs-12">
+					<h3> Search results</h3>
+				</div>
+				<div class="row">
+					<div class="col-sm-12 form-group">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>SI No.</th>
+									<th>Invoice No.</th>
+									<th>Customer Name</th>
+									<th>Appointment No.</th>
+									<th></th>
+									
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>{{$index+1}}</td>
+									<td>123456</td>
+									<td>Parthiban</td>
+									<td>2344567</td>
+									<td><a href="">View details</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div id="exportthis">
+					<div class="row form-group col-xs-12">
+						<h3> Detailed report of Parthiban</h3>
+					</div>
+					<div class="row">
+						<div class="col-sm-12">
+							<div class="row">
+								<div class="col-sm-6 form-group">
+									<label class="control-label col-sm-5">Appointment No.</label>
+	  								<div class="col-sm-7">
+	    								<p class="form-control-static">123456</p>
+	  								</div>
+								</div>
+								<div class="col-sm-6 form-group">
+									<label class="control-label col-sm-4">Invoice No.</label>
+	  								<div class="col-sm-6">
+	    								<p class="form-control-static">2344567</p>
+	  								</div>	
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-sm-6 form-group">
+									<label class="control-label col-sm-5">Customer Name.</label>
+	  								<div class="col-sm-7">
+	    								<p class="form-control-static">Parthiban</p>
+	  								</div>
+								</div>
+								<div class="col-sm-6 form-group">
+									<label class="control-label col-sm-4">Mobile No.</label>
+	  								<div class="col-sm-6">
+	    								<p class="form-control-static">999-999-9999</p>
+	  								</div>	
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-5">Appointment date & Time</label>
+									<div class="col-sm-7">
+									<p class="form-control-static">12-12-2016 , 7:00PM</p>
+									</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-5">Total Amount </label>
+									<div class="col-sm-7">
+									<p class="form-control-static">600</p>
+									</div>
+							</div>
+							<div class="form-group">
+								<label class="control-label col-sm-5">Status</label>
+									<div class="col-sm-7">
+									<p class="form-control-static">Paid</p>
+									</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-6 form-group">
+						<button type="button" class="btn btn-md btn-info" ng-click="generatePDF()">Generate PDF</button>
+						<button type="button" class="btn btn-md btn-info" ng-click="sendEmail()">Send Email</button>	
+						<button type="button" class="btn btn-md btn-info" ng-click="sendSMS()">Send SMS</button>	
+					</div>
+				</div>
+			</div>
+		</form> 
+	</div>
+</div>
+
+
+

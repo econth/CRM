@@ -1,0 +1,30 @@
+<div class="text-center">
+
+  <h2 class="white-text-color modal-heading">Employee Login</h2>  	
+  <form name="loginFrom">
+  
+  <div>	
+	<div class="form-group">
+       <input type="text" class="form-control" ng-model="credentials.username" name="username" placeholder="Username" required/> 
+    </div>
+    <div class="form-group">
+       <input type="Password" class="form-control" ng-model="credentials.password" name="password" placeholder="Password" required/>
+    </div>
+    <div class="form-group">
+     	<button type="button" class="btn btn-success btn-block" ng-click="loginUser(credentials)"><span class="fa fa-sign-in"></span>&nbsp; Sign In</button>	
+    </div>
+    <div class="form-group white-text-color horizontal-line">
+     	or sign in with social media&nbsp;&nbsp;  
+    </div>
+    <div class="form-group">
+     	<a class="btn btn-facebook social-media"><span class="fa fa-facebook"></span> Facebook</a>
+     	<a class="btn btn-twitter social-media"><span class="fa fa-twitter"></span> Twitter</a>	
+     	<a class="btn btn-google social-media"><span class="fa fa-google-plus"></span> Google</a>	
+    </div>
+    <div class="form-group white-text-color">
+     	Don't have an account? <a href="" class="link-decoration" ng-click="signupModal()">Sign Up</a>
+    </div>
+  </div>
+</form>
+</div>
+	
